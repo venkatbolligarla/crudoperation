@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table tr th td{
+        boader :1px solid black;
+        }
+    </style>
+</head>
+<body>
+<a href="/insertpage/">insertpage</a> &nbsp; &nbsp;
+<a href="/displaypage/">displaypage</a> &nbsp; &nbsp;
+<a href="/updatepage/">updatepage</a> &nbsp; &nbsp;
+<a href="/deletepage/">deletepage</a> &nbsp; &nbsp;
+<table>
+    <tr>
+        <th>ID</th>
+        <th> FIRST NAME</th>
+        <th>LAST NAME</th>
+        <th>EMAIL</th>
+        <th>ADDRESS</th>
+        <th>PHONE</th>
+        <th>DELETE</th>
+    </tr>
+    <tr>
+        {% for x in data %}
+        <tr>
+            <td> {{x.id}}</td>
+            <td> {{x.firstname}}</td>
+            <td> {{x.lastname}}</td>
+            <td> {{x.email}}</td>
+            <td> {{x.address}}</td>
+            <td> {{x.phone}}</td>
+            <td> <a href="/deletestudent/{{x.id}}">Delete data </a></td>
+        <tr>
+        {% endfor %}
+    </tr>
+</table>
+</body>
+</html>

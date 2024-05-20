@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>insetpage</title>
+</head>
+<body>
+
+<a href="/insertpage/">insertpage</a> &nbsp; &nbsp;
+<a href="/displaypage/">displaypage</a> &nbsp; &nbsp;
+<a href="/updatepage/">updatepage</a> &nbsp; &nbsp;
+<a href="/deletepage/">deletepage</a> &nbsp; &nbsp;
+
+
+<form action="" method="post">
+    {% csrf_token %}
+    <table>
+        <tr>
+            <th>FIRST NAME</th>
+            <td><input type="text" name="fname" placeholder="Enter Your Fname "></td>
+        </tr>
+        <tr>
+            <th>LAST NAME</th>
+            <td><input type="text" name="lname" placeholder="Enter Your Lname "></td>
+        </tr>
+        <tr>
+            <th>EMAIL</th>
+            <td><input type="text" name="email" placeholder="Enter Your Email "></td>
+        </tr>
+        <tr>
+            <th>ADDRESS</th>
+            <td><input type="text" name="address" placeholder="Enter Your Address "></td>
+        </tr>
+        <tr>
+            <th>PHONE</th>
+            <td><input type="text" name="phone" placeholder="Enter Your Phone "></td>
+        </tr>
+        <tr>
+            <td><input type="submit" name="Student"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
